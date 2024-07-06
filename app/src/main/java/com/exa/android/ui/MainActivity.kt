@@ -14,6 +14,7 @@ import com.exa.android.ui.Utils.Constants
 import com.exa.android.ui.Utils.Constants.currentFragment
 import com.exa.android.ui.databinding.ActivityMainBinding
 import com.exa.android.ui.fragment.signIn
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -93,6 +94,16 @@ class MainActivity : AppCompatActivity() {
     private fun showLoader() {
         binding.container.visibility = View.GONE
         binding.noInternetImg.visibility = View.VISIBLE
+
+        val snackbar = Snackbar.make(binding.root,"Check Your Internet Connection", 5000)
+         snackbar.setAction("Retry"){
+             if (isInternetAvailable(this)) {
+                 hideLoader()
+             } else {
+                 showLoader()
+             }
+         }
+        snackbar.show()
     }
 
     private fun hideLoader() {
@@ -110,7 +121,7 @@ class MainActivity : AppCompatActivity() {
 //        return activeNetwork != null
 //    }
 
-    private fun loadFragment(fragment: Fragment) {
+    private fun loadFragment(fragment: Fragment = signIn()) {
 
         Constants.currentFragment = fragment.javaClass.name
         supportFragmentManager.beginTransaction()

@@ -19,9 +19,9 @@
     </fragment>
     <fragment
         android:id="@+id/signUp"
-        android:name="com.exa.android.ui.fragment.signUp"
+        android:name="com.exa.android.ui.fragment.otpVerify"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/otp_fragment" >
         <action
             android:id="@+id/action_signUp_to_registrationFragment"
             app:destination="@id/registrationFragment" />

@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import com.exa.android.ui.HomeFragment
 import com.exa.android.ui.R
 import com.exa.android.ui.Utils.Constants.currentFragment
@@ -35,6 +36,7 @@ class verification : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Toast.makeText(requireContext(), "You are not yet Registered, Please Register yourself", Toast.LENGTH_SHORT).show()
 
         binding.btnVerify.setOnClickListener {
             val fName = binding.firstName.text.toString()
@@ -59,7 +61,11 @@ class verification : Fragment() {
     fun verifyUser(f:String, l:String,e:String){
 
         binding.details.visibility = View.GONE
+
+        binding.verify.gravity = View.TEXT_ALIGNMENT_GRAVITY
+
         binding.verify.visibility = View.VISIBLE
+
 
         CoroutineScope(Dispatchers.Main).launch {
             delay(3000)

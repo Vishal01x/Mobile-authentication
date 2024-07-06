@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import com.exa.android.ui.R
 import com.exa.android.ui.Utils.Constants
 import com.exa.android.ui.databinding.FragmentSignInBinding
@@ -45,7 +44,7 @@ class signIn : Fragment() {
                 val bundle = Bundle().apply {
                     putString("PhoneNumber", phoneNumber)
                 }
-                val fragment = signUp()
+                val fragment = otpVerify()
                 fragment.arguments = bundle
                 Constants.currentFragment = fragment.javaClass.name
                 parentFragmentManager.beginTransaction()

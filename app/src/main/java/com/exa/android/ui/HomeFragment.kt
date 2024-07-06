@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 
 lateinit var name : String
 
@@ -25,5 +26,7 @@ class HomeFragment : Fragment() {
         val text = view.findViewById<TextView>(R.id.name)
 
         text.text = name
+
+        Toast.makeText(requireContext(), "You have registered successfully",Toast.LENGTH_SHORT).show()
     }
 }
