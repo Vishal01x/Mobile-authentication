@@ -44,14 +44,17 @@ class signUp : Fragment() {
         // You can also add logic to validate the OTP here
         binding.btnSend.setOnClickListener {
             val otp = binding.editText1.text.toString() + binding.editText2.text.toString() + binding.editText3.text.toString() + binding.editText4.text.toString() + binding.editText5.text.toString()
-            Toast.makeText(requireContext(), "Entered OTP: $otp", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "You are not yet Registered, Please Register yourself", Toast.LENGTH_SHORT).show()
             // Proceed with verification logic
+            if(otp.length == 5) {
+                val fragment = verification().javaClass.name
 
-            val fragment = verification().javaClass.name
-
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.container, verification(), fragment)
-                .commit()
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.container, verification(), fragment)
+                    .commit()
+            }else{
+                Toast.makeText(requireContext(), "Please Enter OTP For Verification", Toast.LENGTH_SHORT).show()
+            }
         }
 
 

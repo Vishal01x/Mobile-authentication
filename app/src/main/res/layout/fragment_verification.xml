@@ -39,7 +39,7 @@
         android:text="Enter First Name"
         android:layout_marginTop="48dp"
         android:textSize="16sp"
-        android:textColor="@color/gray"/>
+        android:textColor="@color/black"/>
 
 
     <EditText
@@ -60,7 +60,7 @@
         android:text="Enter Last Name"
         android:layout_marginTop="32dp"
         android:textSize="16sp"
-        android:textColor="@color/gray"/>
+        android:textColor="@color/black"/>
 
 
     <EditText
@@ -81,7 +81,7 @@
         android:text="Enter Email Address"
         android:layout_marginTop="32dp"
         android:textSize="16sp"
-        android:textColor="@color/gray"/>
+        android:textColor="@color/black"/>
 
 
     <EditText
