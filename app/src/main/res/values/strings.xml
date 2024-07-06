@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ui</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help_line1">Please enter your Country and</string>
+    <string name="help_line2">your Phone Number</string>
+    <string name="verify_your_number">Verify Your Number</string>
+    <string name="instruct1"><![CDATA[Please enter your Country &]]></string>
+    <string name="instruct2">your Phone Number</string>
+    <string name="hint">70248 30561</string>
+    <string name="btn_text">SEND</string>
+</resources>
