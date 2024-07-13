@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891021758630",
+    "project_id": "wond-ffa15",
+    "storage_bucket": "wond-ffa15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891021758630:android:74cd5c6b8374f0851c6467",
+        "android_client_info": {
+          "package_name": "com.exa.android.ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKbjO6rgGGZUg6i-67TbXg16i8ZZFo928"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
